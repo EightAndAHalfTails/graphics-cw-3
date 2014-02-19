@@ -69,7 +69,10 @@ void createVertBary(float a, float b)
   gl_Position.xyz += 0.05 * sin(1.0/5.0 * pi * time + rnd(frag.vpos.xy)) * frag.normal;
   
   // [tea-brewing intensifies]
-  gl_Position.xyz += 0.05 * vec3( rnd(vec2(0, time)), rnd(vec2(time, 0)), rnd(vec2(time, time)) );
+  // gl_Position.xyz += 0.05 * vec3( rnd(vec2(0, time)), rnd(vec2(time, 0)), rnd(vec2(time, time)) );
+
+  // [intensification intensifies]
+  gl_Position.xyz += time * 0.05 * vec3( rnd(vec2(0, time)), rnd(vec2(time, 0)), rnd(vec2(time, time)) );
 
   // here's your melting teapot.
   // gl_Position.y -= 0.1 * time * abs(rnd(frag.vpos.xy));
