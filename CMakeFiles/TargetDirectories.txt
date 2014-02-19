@@ -1,0 +1,3 @@
+/homes/jbh111/graphics/Coursework 3/cgcoursework/CMakeFiles/cgExercise01.dir
+/homes/jbh111/graphics/Coursework 3/cgcoursework/CMakeFiles/cgExercise02.dir
+/homes/jbh111/graphics/Coursework 3/cgcoursework/CMakeFiles/cgExercise03.dir
