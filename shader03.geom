@@ -61,6 +61,23 @@ void createVertBary(float a, float b)
               + b * gl_in[1].gl_Position
               + c * gl_in[2].gl_Position;
 
+  /*****Bonus Effects**************/
+  // pulsing teapot
+  // gl_Position.xyz += 0.02 * sin(1.0/5.0 * pi * time) * frag.normal;
+
+  // same, but with random phase offset per vertex
+  gl_Position.xyz += 0.05 * sin(1.0/5.0 * pi * time + rnd(frag.vpos.xy)) * frag.normal;
+  
+  // [tea-brewing intensifies]
+  gl_Position.xyz += 0.05 * vec3( rnd(vec2(0, time)), rnd(vec2(time, 0)), rnd(vec2(time, time)) );
+
+  // here's your melting teapot.
+  // gl_Position.y -= 0.1 * time * abs(rnd(frag.vpos.xy));
+
+  // even meltier teapot
+  gl_Position.y -= 0.1 * time * sqrt(abs(rnd(frag.vpos.xy)));
+
+  /*********************************/
   EmitVertex();
 }
 
